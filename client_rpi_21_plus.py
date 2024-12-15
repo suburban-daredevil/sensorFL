@@ -6,10 +6,10 @@ import flwr as fl
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 
-X_train = pd.read_csv('rpi_21_plus/x_train.csv')
-X_test = pd.read_csv('rpi_21_plus/x_test.csv')
-y_train = pd.read_csv('rpi_21_plus/y_train.csv')
-y_test = pd.read_csv('rpi_21_plus/y_test.csv')
+X_train = pd.read_csv('rpi_21_plus/x_train_rpi_21_plus.csv')
+X_test = pd.read_csv('rpi_21_plus/x_test_rpi_21_plus.csv')
+y_train = pd.read_csv('rpi_21_plus/y_train_rpi_21_plus.csv')
+y_test = pd.read_csv('rpi_21_plus/y_test_rpi_21_plus.csv')
 
 model = Sequential([
     Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
