@@ -10,8 +10,11 @@ from imblearn.over_sampling import SMOTE
 from DBSCAN_anomaly_detection import GridSearchHelper
 from helper_functions.print_head_df import print_head_df
 
-url = 'https://raw.githubusercontent.com/anik801/BDL_data_1/refs/heads/main/data/plus/rpi_20_plus.csv'
-df = pd.read_csv(url)
+# url = 'https://raw.githubusercontent.com/anik801/BDL_data_1/refs/heads/main/data/plus/rpi_20_plus.csv'
+
+url1 = 'https://raw.githubusercontent.com/anik801/BDL_data_1/refs/heads/main/data/plus/rpi_21_plus.csv'
+
+df = pd.read_csv(url1)
 
 df['date_time'] = pd.to_datetime(df['date_time'])
 print_head_df(df)
@@ -63,7 +66,7 @@ print('\nAfter SMOTE transformation\n')
 for key in counter.keys():
     print('Class:', key, '=', counter[key])
 
-df.to_csv('rpi_20_plus_with_anomalies.csv')
+df.to_csv('rpi_21_plus_with_anomalies.csv', index=False)
 print('Dataframe saved to file successfully!')
 
 # visualization
